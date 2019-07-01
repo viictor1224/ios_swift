@@ -12,6 +12,9 @@
 		833F139D2286FD02003E6E44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 833F139B2286FD02003E6E44 /* Main.storyboard */; };
 		833F139F2286FD04003E6E44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 833F139E2286FD04003E6E44 /* Assets.xcassets */; };
 		833F13A22286FD04003E6E44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 833F13A02286FD04003E6E44 /* LaunchScreen.storyboard */; };
+		8439A50422A2B2ED00D82A04 /* telaPonto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439A50322A2B2ED00D82A04 /* telaPonto.swift */; };
+		8439A50622A2F40400D82A04 /* ViewControllerPonto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439A50522A2F40400D82A04 /* ViewControllerPonto.swift */; };
+		8439A50822A310B800D82A04 /* relogio.png in Resources */ = {isa = PBXBuildFile; fileRef = 8439A50722A310B700D82A04 /* relogio.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		833F139E2286FD04003E6E44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		833F13A12286FD04003E6E44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		833F13A32286FD04003E6E44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8439A50322A2B2ED00D82A04 /* telaPonto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = telaPonto.swift; sourceTree = "<group>"; };
+		8439A50522A2F40400D82A04 /* ViewControllerPonto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPonto.swift; sourceTree = "<group>"; };
+		8439A50722A310B700D82A04 /* relogio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = relogio.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				833F139E2286FD04003E6E44 /* Assets.xcassets */,
 				833F13A02286FD04003E6E44 /* LaunchScreen.storyboard */,
 				833F13A32286FD04003E6E44 /* Info.plist */,
+				8439A50322A2B2ED00D82A04 /* telaPonto.swift */,
+				8439A50522A2F40400D82A04 /* ViewControllerPonto.swift */,
+				8439A50722A310B700D82A04 /* relogio.png */,
 			);
 			path = projeto_final;
 			sourceTree = "<group>";
@@ -125,6 +134,7 @@
 				833F13A22286FD04003E6E44 /* LaunchScreen.storyboard in Resources */,
 				833F139F2286FD04003E6E44 /* Assets.xcassets in Resources */,
 				833F139D2286FD02003E6E44 /* Main.storyboard in Resources */,
+				8439A50822A310B800D82A04 /* relogio.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				833F139A2286FD02003E6E44 /* ViewController.swift in Sources */,
+				8439A50422A2B2ED00D82A04 /* telaPonto.swift in Sources */,
 				833F13982286FD02003E6E44 /* AppDelegate.swift in Sources */,
+				8439A50622A2F40400D82A04 /* ViewControllerPonto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N2a-EB-SxV">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,29 +24,35 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VK6-vZ-Xld">
-                                <rect key="frame" x="115" y="326" width="145" height="30"/>
-                                <state key="normal" title="Entrar"/>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Não possui conta?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GsK-aY-Is4">
                                 <rect key="frame" x="120" y="404" width="135" height="37"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWz-uK-r8m">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWz-uK-r8m">
                                 <rect key="frame" x="140" y="452" width="95" height="30"/>
                                 <state key="normal" title="Cadastre-se"/>
+                                <connections>
+                                    <action selector="btnCadastro:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QU1-zq-OS5"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y5Q-rH-Kl2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="relogio.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y5Q-rH-Kl2">
                                 <rect key="frame" x="60" y="74" width="255" height="128"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1uL-jb-XY7">
                                 <rect key="frame" x="75" y="278" width="225" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VK6-vZ-Xld">
+                                <rect key="frame" x="115" y="338" width="145" height="30"/>
+                                <state key="normal" title="Entrar"/>
+                                <connections>
+                                    <action selector="btnEntrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yyK-3E-9ct"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -72,58 +78,89 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="uRS-Yk-UiP"/>
+                    <connections>
+                        <outlet property="lblConta" destination="GsK-aY-Is4" id="qa0-16-mG3"/>
+                        <outlet property="txtEmail" destination="mP1-0o-2C8" id="knL-8k-KTx"/>
+                        <outlet property="txtSenha" destination="1uL-jb-XY7" id="43x-gQ-wun"/>
+                        <segue destination="hmZ-61-cLo" kind="show" identifier="trocarTelaPonto" id="pag-Pz-fea"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-82.400000000000006" y="133.5832083958021"/>
+            <point key="canvasLocation" x="841" y="134"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="1fm-ip-GcL">
+        <!--View Controller Ponto-->
+        <scene sceneID="72M-Fb-x67">
             <objects>
-                <viewController id="yzX-6g-eZ2" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6QA-ix-F5p">
+                <viewController id="hmZ-61-cLo" customClass="ViewControllerPonto" customModule="projeto_final" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ixf-ER-ciO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oo-P6-2bQ">
-                                <rect key="frame" x="40" y="55" width="45" height="30"/>
-                                <state key="normal" title="Voltar"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpP-S5-QrG">
+                                <rect key="frame" x="147" y="537" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Bater Ponto"/>
+                                <connections>
+                                    <action selector="btnPonto:" destination="hmZ-61-cLo" eventType="touchUpInside" id="0vQ-OW-8eO"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fDj-Je-Eki">
-                                <rect key="frame" x="105" y="115" width="165" height="130"/>
-                            </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dch-71-j8K">
-                                <rect key="frame" x="65" y="285" width="245" height="182"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aA2-1G-dgE">
+                                <rect key="frame" x="139" y="469" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xu9-uf-go6">
+                                <rect key="frame" x="0.0" y="64" width="375" height="242"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PontoItem" id="g5o-CU-1YK">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g5o-CU-1YK" id="vdG-JB-8of">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mpx-sE-lJt">
-                                <rect key="frame" x="135" y="497" width="105" height="30"/>
-                                <state key="normal" title="Bater ponto"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="dch-71-j8K" firstAttribute="top" secondItem="fDj-Je-Eki" secondAttribute="bottom" constant="40" id="1JX-B0-U6g"/>
-                            <constraint firstItem="dch-71-j8K" firstAttribute="leading" secondItem="L0w-VH-qgJ" secondAttribute="leading" constant="65" id="4Zi-hA-Pe9"/>
-                            <constraint firstItem="L0w-VH-qgJ" firstAttribute="bottom" secondItem="Mpx-sE-lJt" secondAttribute="bottom" constant="140" id="JmP-DW-TMi"/>
-                            <constraint firstItem="4oo-P6-2bQ" firstAttribute="leading" secondItem="L0w-VH-qgJ" secondAttribute="leading" constant="40" id="JuP-KI-f2t"/>
-                            <constraint firstItem="dch-71-j8K" firstAttribute="top" secondItem="4oo-P6-2bQ" secondAttribute="bottom" constant="200" id="LPj-sk-Oh8"/>
-                            <constraint firstItem="fDj-Je-Eki" firstAttribute="top" secondItem="L0w-VH-qgJ" secondAttribute="top" constant="95" id="OTt-9I-62A"/>
-                            <constraint firstItem="Mpx-sE-lJt" firstAttribute="top" secondItem="dch-71-j8K" secondAttribute="bottom" constant="30" id="bra-CF-2wV"/>
-                            <constraint firstItem="fDj-Je-Eki" firstAttribute="leading" secondItem="L0w-VH-qgJ" secondAttribute="leading" constant="105" id="d4I-dX-QtL"/>
-                            <constraint firstItem="4oo-P6-2bQ" firstAttribute="top" secondItem="L0w-VH-qgJ" secondAttribute="top" constant="35" id="eCA-nb-7ui"/>
-                            <constraint firstItem="L0w-VH-qgJ" firstAttribute="trailing" secondItem="fDj-Je-Eki" secondAttribute="trailing" constant="105" id="htG-uf-yzH"/>
-                            <constraint firstItem="L0w-VH-qgJ" firstAttribute="trailing" secondItem="dch-71-j8K" secondAttribute="trailing" constant="65" id="jPI-9q-MbE"/>
-                            <constraint firstItem="L0w-VH-qgJ" firstAttribute="trailing" secondItem="4oo-P6-2bQ" secondAttribute="trailing" constant="290" id="oir-ak-gsV"/>
-                            <constraint firstItem="L0w-VH-qgJ" firstAttribute="trailing" secondItem="Mpx-sE-lJt" secondAttribute="trailing" constant="135" id="rdw-Cy-eAC"/>
-                            <constraint firstItem="Mpx-sE-lJt" firstAttribute="leading" secondItem="L0w-VH-qgJ" secondAttribute="leading" constant="135" id="sX0-JH-kaj"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="L0w-VH-qgJ"/>
+                        <viewLayoutGuide key="safeArea" id="Bon-kz-5X5"/>
                     </view>
+                    <connections>
+                        <outlet property="tblPonto" destination="xu9-uf-go6" id="S4j-uk-DEk"/>
+                        <outlet property="txtPonto" destination="aA2-1G-dgE" id="KWi-WM-LxV"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ukv-Er-V2a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hOu-ZI-5uL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1704.8" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NIn-ov-PVu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N2a-EB-SxV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hpj-fD-5gW">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="764-g3-MeU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6xi-Od-uIo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-82.400000000000006" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="relogio.png" width="512" height="512"/>
+    </resources>
 </document>
